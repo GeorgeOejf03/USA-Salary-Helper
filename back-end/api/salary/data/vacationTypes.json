@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Three per year (one week each), Relatively Expensive",
+    "value": 150.0
+  },
+  {
+    "label": "Two per year (one week each), Relatively Expensive",
+    "value": 100.0
+  },
+  {
+    "label": "Once per year (one week each), Relatively Expensive",
+    "value": 51.0
+  },
+  {
+    "label": "Twice per year (one week each), Relatively InExpensive",
+    "value": 49.0
+  },
+  {
+    "label": "Once per year (one week each), Relatively InExpensive",
+    "value": 25.0
+  },
+  {
+    "label": "None",
+    "value": 0.0
+  }
+]

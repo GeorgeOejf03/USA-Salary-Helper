@@ -1,0 +1,22 @@
+[
+  {
+    "label": "A lot",
+    "value": 400.0
+  },
+  {
+    "label": "High",
+    "value": 200.0
+  },
+  {
+    "label": "Moderate",
+    "value": 100.0
+  },
+  {
+    "label": "Low",
+    "value": 30.0
+  },
+  {
+    "label": "No",
+    "value": 0.0
+  }
+]

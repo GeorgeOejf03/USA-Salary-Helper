@@ -1,0 +1,140 @@
+<div class="container salary-form">
+
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="form-group">
+      <label for="members">Number Of Members In Your Household</label>
+      <input type="number" class="form-control" id="members" [(ngModel)]="members" name="members" placeholder="Enter number of members .." />
+    </div>
+
+    <div class="form-group">
+      <label for="restaurants_percentage">Percentage Of Eating Lunch Or Dinner In Restaurants</label>
+      <select class="form-control" required id="restaurants_percentage" [(ngModel)]="restaurants_percentage" name="restaurants_percentage">
+        <option *ngFor="let v of listVlaues.restaurantsPercentages" value="{{v}}">{{ v }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="inexpensive_restaurants_percentage">Percentage Of Choosing An Inexpensive Restaurant</label>
+      <select class="form-control" required id="inexpensive_restaurants_percentage" [(ngModel)]="inexpensive_restaurants_percentage" name="inexpensive_restaurants_percentage">
+        <option *ngFor="let v of listVlaues.inexpensiveRestaurantsPercentages" value="{{v}}">{{ v }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="drinking_coffee_outside">Drinking Coffee Outside Your Home</label>
+      <select class="form-control" required id="drinking_coffee_outside" [(ngModel)]="drinking_coffee_outside" name="drinking_coffee_outside">
+        <option *ngFor="let v of listVlaues.coffeeValues" value="{{v.value}}">{{ v.label }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="going_out_monthly">Going Out (cinema, night life, etc.)</label>
+      <select class="form-control" required id="going_out_monthly" [(ngModel)]="going_out_monthly" name="going_out_monthly">
+        <option *ngFor="let v of listVlaues.goingOutValues" value="{{v.value}}">{{ v.label }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="smoking_packs_per_day">Smoking. Number Of Packs Per Day (household overall)</label>
+      <input type="number" class="form-control" id="smoking_packs_per_day" [(ngModel)]="smoking_packs_per_day" name="smoking_packs_per_day" required placeholder="Enter number .." />
+    </div>
+
+    <div class="form-group">
+      <label for="alcoholic_drinks">Alcoholic Beverages Consumption</label>
+      <select class="form-control" required id="alcoholic_drinks" [(ngModel)]="alcoholic_drinks" name="alcoholic_drinks">
+        <option *ngFor="let v of listVlaues.alcholicValues" value="{{v.value}}">{{ v.label }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="type_of_food">At Home You're Eating</label>
+      <select class="form-control" required id="type_of_food" [(ngModel)]="type_of_food" name="type_of_food">
+        <option *ngFor="let v of listVlaues.foodTypes" value="{{v.value}}">{{ v.label }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="driving_car">Driving Car</label>
+      <select class="form-control" required id="driving_car" [(ngModel)]="driving_car" name="driving_car">
+        <option *ngFor="let v of listVlaues.carTypes" value="{{v.value}}">{{ v.label }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="taxi_consumption">Taking Taxi</label>
+      <select class="form-control" required id="taxi_consumption" [(ngModel)]="taxi_consumption" name="taxi_consumption">
+        <option *ngFor="let v of listVlaues.taxiTypes" value="{{v.value}}">{{ v.label }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="paying_for_public_transport">Paying For Public Transport Tickets</label>
+      <select class="form-control" required id="paying_for_public_transport" [(ngModel)]="paying_for_public_transport" name="paying_for_public_transport">
+        <option *ngFor="let v of listVlaues.publicTransportTypes" value="{{v}}">{{ v }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="sport_memberships">Sport Memberships</label>
+      <select class="form-control" required id="sport_memberships" [(ngModel)]="sport_memberships" name="sport_memberships">
+        <option *ngFor="let v of listVlaues.sportMembershipTypes" value="{{v.value}}">{{ v.label }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="vacation">Vacation & Travel</label>
+      <select class="form-control" required id="vacation" [(ngModel)]="vacation" name="vacation">
+        <option *ngFor="let v of listVlaues.vacationTypes" value="{{v.value}}">{{ v.label }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="clothing_and_shoes">Buying Clothing & Shoes</label>
+      <select class="form-control" required id="clothing_and_shoes" [(ngModel)]="clothing_and_shoes" name="clothing_and_shoes">
+        <option *ngFor="let v of listVlaues.clothingTypes" value="{{v.value}}">{{ v.label }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="rent">Rent</label>
+      <select class="form-control" required id="rent" [(ngModel)]="rent" name="rent">
+        <option *ngFor="let v of listVlaues.rentTypes" value="{{v.value}}">{{ v.label }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="kindergarten_count">Number Of Children Going To Kindergarten</label>
+      <input type="number" class="form-control" id="kindergarten_count" [(ngModel)]="kindergarten_count" name="kindergarten_count" required placeholder="Enter number .." />
+    </div>
+
+    <div class="form-group">
+      <label for="private_schools_count">Number Of Children Going To A Private School</label>
+      <input type="number" class="form-control" id="private_schools_count" [(ngModel)]="private_schools_count" name="private_schools_count" required placeholder="Enter number .." />
+    </div>
+
+    <div class="form-group">
+      <label for="pay_rate">Salary (per year in USD)</label>
+      <input type="number" class="form-control" id="pay_rate" [(ngModel)]="pay_rate" name="pay_rate" required placeholder="Enter number .." />
+    </div>
+
+    <div class="form-group">
+      <label for="additionalPayments">Additional Payments Like Loans, Lease .. etc (per month in USD)</label>
+      <input type="number" class="form-control" id="additionalPayments" [(ngModel)]="additionalPayments" name="additionalPayments" required placeholder="Enter number .." />
+    </div>
+
+    <div class="form-group">
+      <label for="city">City</label>
+      <input class="form-control" id="city" [(ngModel)]="city" name="city" required placeholder="Enter city .." />
+    </div>
+
+    <div class="form-group">
+      <label for="state">State</label>
+      <select class="form-control" required id="state" [(ngModel)]="state" name="state">
+        <option *ngFor="let v of listVlaues.states" value="{{v.value}}">{{ v.label }}</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+
+  </form>
+</div>
