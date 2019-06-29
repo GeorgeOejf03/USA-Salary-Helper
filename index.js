@@ -17,6 +17,8 @@ async function serverHandler () {
 
   const frontEndPath = path.join(__dirname, 'dist', 'front-end');
 
+  
+
   // serve static files from view folder
   server.route({
     method: 'GET',
