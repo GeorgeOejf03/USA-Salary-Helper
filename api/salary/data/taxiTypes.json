@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Daily one round trip",
+    "value": 62.8
+  },
+  {
+    "label": "Two round trips per Week",
+    "value": 16.8
+  },
+  {
+    "label": "One round trip per Week",
+    "value": 8.4
+  },
+  {
+    "label": "One round trip per Month",
+    "value": 2.0
+  },
+  {
+    "label": "None",
+    "value": 62.8
+  }
+]

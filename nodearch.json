@@ -1,0 +1,7 @@
+{
+  "extensions": [
+  ],
+  "logger": {
+    "level": "silly"
+  }
+}
