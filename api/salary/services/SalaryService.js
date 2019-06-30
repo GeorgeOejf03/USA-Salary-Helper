@@ -7,7 +7,11 @@ const qs = require('querystring');
 const request = require("request-promise-native");
 const nodearch = require('nodearch');
 
-const { taxee, costOfLiving } = nodearch.config; 
+const { taxee, costOfLiving } = nodearch.config;
+
+const toNearest2Decimal = function (num) {
+  return Math.round(num * 100) / 100;
+}
 
 module.exports = {
   getCostOfLiving: async function (query) {
@@ -46,7 +50,7 @@ module.exports = {
     return costs;
   },
 
-  getTaxes: async function(query) {
+  getTaxes: async function (query) {
     const options = {
       method: 'POST',
       url: `${taxee.url}`,
@@ -54,37 +58,55 @@ module.exports = {
       body: { filing_status: 'single', pay_rate: query.pay_rate, state: query.state },
       json: true
     };
-    
+
     return await request.post(options);
   },
 
-  sumTaxes: function(taxes) {
-    return (taxes.annual.state.amount? taxes.annual.state.amount + taxes.annual.federal.amount : taxes.annual.federal.amount);
+  sumTaxes: function (taxes) {
+    return (taxes.annual.state.amount ? taxes.annual.state.amount + taxes.annual.federal.amount : taxes.annual.federal.amount);
   },
 
-  divideValues: function(costs, totalTaxes, additionalPayments, payRate) {
+  divideValues: function (costs, totalTaxes, additionalPayments, payRate) {
     const dividedCosts = [];
 
-    const taxesPerMonth = Math.round((totalTaxes / 12) * 100) / 100;
     const pureSpendingsObject = _.last(costs);
-    const total = pureSpendingsObject.cost + taxesPerMonth + additionalPayments;
-    const savedMoneyDecimal = ((payRate - totalTaxes) / 12) - pureSpendingsObject.cost - additionalPayments;
-    const savedMoneyPerMonth = Math.round(savedMoneyDecimal * 100) / 100;
+    const pureSpendingsPerMonth = pureSpendingsObject.cost;
+    const totalSpentPerMonth = toNearest2Decimal(pureSpendingsPerMonth + additionalPayments);
+    const totalSpentPerYear = totalSpentPerMonth * 12;
+    const incomeAfterTaxes = payRate - totalTaxes;
+    const totalSavingsPerYear = toNearest2Decimal(incomeAfterTaxes - totalSpentPerYear);
+    const totalSavingsPerMonth = toNearest2Decimal(totalSavingsPerYear / 12);
 
+    costs.length = costs.length - 1;
     costs.push({ item: "Additional payments", cost: additionalPayments });
-    costs.push({ item: "Taxes per month (without FICA)", cost: taxesPerMonth });
-    costs.push({ item: 'Total spent per month including taxes and additional payments', cost: total });
+    costs.push({
+      item: "Total spendings per month",
+      cost: totalSpentPerMonth,
+      details: [
+        {
+        item: "Monthly spendings on food/transportation ..etc", 
+        cost: pureSpendingsPerMonth
+      }, 
+      {
+        item: "Additional payments as entered by user",
+        cost: additionalPayments
+      }]
+    });
+
+    costs.push({ item: "Total spent per year", cost: totalSpentPerYear });
+    costs.push({ item: "Taxes per year (without FICA)", cost: totalTaxes });
+    costs.push({ item: "Income after taxes per year", cost: incomeAfterTaxes });
 
     let subElement;
 
     _.forEach(costs, (data) => {
-      if(!_.endsWith(data.item, '=')) {
-        if(subElement) dividedCosts.push(subElement);
+      if (!_.endsWith(data.item, '=')) {
+        if (subElement) dividedCosts.push(subElement);
 
         subElement = {};
         subElement.name = data.item;
         subElement.totalCost = data.cost;
-        subElement.details = [];
+        subElement.details = data.details || [];
 
       } else {
         subElement.details.push(data);
@@ -93,6 +115,6 @@ module.exports = {
 
     dividedCosts.push(subElement);
 
-    return { dividedCosts, savedMoneyPerMonth };
+    return { dividedCosts, totalSavingsPerMonth, totalSavingsPerYear };
   }
 }

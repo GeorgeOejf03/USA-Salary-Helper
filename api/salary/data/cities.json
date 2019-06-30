@@ -1,0 +1,247 @@
+[
+  {
+    "label": "Albany, NY, United States",
+    "value": "Albany",
+    "state": "NY"
+  },
+  {
+    "label": "Anchorage, AK, United States",
+    "value": "Anchorage",
+    "state": "AK"
+  },
+  {
+    "label": "Asheville, NC, United States",
+    "value": "Asheville",
+    "state": "NC"
+  },
+  {
+    "label": "Atlanta, GA, United States",
+    "value": "Atlanta",
+    "state": "GA"
+  },
+  {
+    "label": "Austin, TX, United States",
+    "value": "Austin",
+    "state": "TX"
+  },
+  {
+    "label": "Baltimore, MD, United States",
+    "value": "Baltimore",
+    "state": "MD"
+  },
+  {
+    "label": "Boston, MA, United States",
+    "value": "Boston",
+    "state": "MA"
+  },
+  {
+    "label": "Brooklyn, NY, United States",
+    "value": "Brooklyn",
+    "state": "NY"
+  },
+  {
+    "label": "Buffalo, NY, United States",
+    "value": "Buffalo",
+    "state": "NY"
+  },
+  {
+    "label": "Charlotte, NC, United States",
+    "value": "Charlotte",
+    "state": "NC"
+  },
+  {
+    "label": "Chicago, IL, United States",
+    "value": "Chicago",
+    "state": "IL"
+  },
+  {
+    "label": "Columbus, OH, United States",
+    "value": "Columbus",
+    "state": "OH"
+  },
+  {
+    "label": "Dallas, TX, United States",
+    "value": "Dallas",
+    "state": "TX"
+  },
+  {
+    "label": "Denver, CO, United States",
+    "value": "Denver",
+    "state": "CO"
+  },
+  {
+    "label": "Honolulu, HI, United States",
+    "value": "Honolulu",
+    "state": "HI"
+  },
+  {
+    "label": "Houston, TX, United States",
+    "value": "Houston",
+    "state": "TX"
+  },
+  {
+    "label": "Indianapolis, IN, United States",
+    "value": "Indianapolis",
+    "state": "IN"
+  },
+  {
+    "label": "Kansas City, MO, United States",
+    "value": "Kansas-City",
+    "state": "MO"
+  },
+  {
+    "label": "Las Vegas, NV, United States",
+    "value": "Las-Vegas",
+    "state": "NV"
+  },
+  {
+    "label": "Little Rock, AR, United States",
+    "value": "Little-Rock",
+    "state": "AR"
+  },
+  {
+    "label": "Los Angeles, CA, United States",
+    "value": "Los-Angeles",
+    "state": "CA"
+  },
+  {
+    "label": "Louisville, KY, United States",
+    "value": "Louisville",
+    "state": "KY"
+  },
+  {
+    "label": "Madison, WI, United States",
+    "value": "Madison",
+    "state": "WI"
+  },
+  {
+    "label": "Memphis, TN, United States",
+    "value": "Memphis",
+    "state": "TN"
+  },
+  {
+    "label": "Miami, FL, United States",
+    "value": "Miami",
+    "state": "FL"
+  },
+  {
+    "label": "Milwaukee, WI, United States",
+    "value": "Milwaukee",
+    "state": "WI"
+  },
+  {
+    "label": "Minneapolis, MN, United States",
+    "value": "Minneapolis",
+    "state": "MN"
+  },
+  {
+    "label": "Nashville, TN, United States",
+    "value": "Nashville",
+    "state": "TN"
+  },
+  {
+    "label": "New York, NY, United States",
+    "value": "New-York",
+    "state": "NY"
+  },
+  {
+    "label": "Oakland, CA, United States",
+    "value": "Oakland",
+    "state": "CA"
+  },
+  {
+    "label": "Orlando, FL, United States",
+    "value": "Orlando",
+    "state": "FL"
+  },
+  {
+    "label": "Philadelphia, PA, United States",
+    "value": "Philadelphia",
+    "state": "PA"
+  },
+  {
+    "label": "Phoenix, AZ, United States",
+    "value": "Phoenix",
+    "state": "AZ"
+  },
+  {
+    "label": "Pittsburgh, PA, United States",
+    "value": "Pittsburgh",
+    "state": "PA"
+  },
+  {
+    "label": "Portland, OR, United States",
+    "value": "Portland",
+    "state": "OR"
+  },
+  {
+    "label": "Raleigh, NC, United States",
+    "value": "Raleigh",
+    "state": "NC"
+  },
+  {
+    "label": "Reno, NV, United States",
+    "value": "Reno",
+    "state": "NV"
+  },
+  {
+    "label": "Sacramento, CA, United States",
+    "value": "Sacramento",
+    "state": "CA"
+  },
+  {
+    "label": "Saint Louis, MO, United States",
+    "value": "Saint-Louis",
+    "state": "MO"
+  },
+  {
+    "label": "Salt Lake City, UT, United States",
+    "value": "Salt-Lake-City",
+    "state": "UT"
+  },
+  {
+    "label": "San Antonio, TX, United States",
+    "value": "San-Antonio",
+    "state": "TX"
+  },
+  {
+    "label": "San Diego, CA, United States",
+    "value": "San-Diego",
+    "state": "CA"
+  },
+  {
+    "label": "San Francisco, CA, United States",
+    "value": "San-Francisco",
+    "state": "CA"
+  },
+  {
+    "label": "San Jose, CA, United States",
+    "value": "San-Jose",
+    "state": "CA"
+  },
+  {
+    "label": "Seattle, WA, United States",
+    "value": "Seattle",
+    "state": "WA"
+  },
+  {
+    "label": "Tampa, FL, United States",
+    "value": "Tampa",
+    "state": "FL"
+  },
+  {
+    "label": "Tucson, AZ, United States",
+    "value": "Tucson",
+    "state": "AZ"
+  },
+  {
+    "label": "Tulsa, OK, United States",
+    "value": "Tulsa",
+    "state": "OK"
+  },
+  {
+    "label": "Washington, DC, United States",
+    "value": "Washington",
+    "state": "DC"
+  }
+]

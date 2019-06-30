@@ -36,7 +36,7 @@ module.exports = {
     private_schools_count: joi.number().required().min(0).default(0).description('Number of your children going to the private school'),
     pay_rate: joi.number().required().description('Salary per year'),
     additionalPayments: joi.number().required().description('Additional Payments inluding loans'),
-    city: joi.string().required().description('City you will be living in'),
+    city: joi.string().required().valid(joiValues.cities).description('City you will be living in'),
     state: joi.string().required().valid(joiValues.states).description('State you will be living in')
   }).required()
 }
