@@ -17,7 +17,7 @@
     "lodash": "^4.17.10",
     "mocha": "^5.1.1",
     "mongoose": "^5.0.16",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "nodearch": "^1.0.7",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7",
